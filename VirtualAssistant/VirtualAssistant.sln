@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualAssistant", "VirtualAssistant\VirtualAssistant.csproj", "{73246728-322F-4F85-BB5E-7FCEFEAF8F70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualAssistant.Web", "VirtualAssistant.Web\VirtualAssistant.Web.csproj", "{73246728-322F-4F85-BB5E-7FCEFEAF8F70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualAssistant.BO", "VisualAssistant.BO\VisualAssistant.BO.csproj", "{251DABFA-FCF4-4349-B9E0-5896C38445C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		{73246728-322F-4F85-BB5E-7FCEFEAF8F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73246728-322F-4F85-BB5E-7FCEFEAF8F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73246728-322F-4F85-BB5E-7FCEFEAF8F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{251DABFA-FCF4-4349-B9E0-5896C38445C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{251DABFA-FCF4-4349-B9E0-5896C38445C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251DABFA-FCF4-4349-B9E0-5896C38445C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{251DABFA-FCF4-4349-B9E0-5896C38445C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
