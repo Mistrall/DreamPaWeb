@@ -10,16 +10,16 @@
 		@Styles.Render("~/css")
 		@Styles.Render("~/css/clean-canvas-theme")
 		
-		@RenderSection("usage", required:false)
+		@RenderSection("usage", required: false)
 
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
-@*		<link rel="stylesheet" href="~/Content/clean-canvas-bootstrap/index.css"/>*@
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+		@*		<link rel="stylesheet" href="~/Content/clean-canvas-bootstrap/index.css"/>*@
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 	</head>
-	<body>
+	<body class="pull_top">
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
@@ -47,72 +47,60 @@
 				</div>
 			</noscript>
 			@*		Main content goes here*@
-			<div>
-@*				@if (IsSectionDefined("sidebar"))*@
-@*				{*@
-@*					<div class="span2">*@
-@*						@RenderSection("sidebar", required: false)*@
-@*					</div>*@
-@*				}*@
 
-				<div id="content">
-					@if (IsSectionDefined("featured"))
-					{
-						<div>
-							<div>
-								@RenderSection("featured", required: false)
-							</div>
-						</div>
-					}
-					<div>
-						@RenderBody()
-					</div>
+			<div id="content">
+				@if (IsSectionDefined("featured"))
+				{
+					@RenderSection("featured", required: false)
+				}
+				<div>
+					@RenderBody()
 				</div>
 			</div>
 		</div>
-    <footer id="footer" >
-        <div class="container">
-            <div class="row info">
-                <div class="span6 residence">
-                    <ul>
-                        <li>2301 East Lamar Blvd. Suite 140. City, Arlington.</li>
-                        <li>United States, Zip Code TX 76006.</li>
-                    </ul>
-                </div>
-                <div class="span5 touch">
-                    <ul>
-                        <li><strong>P.</strong> 1 817 274 2933</li>
-                        <li><strong>E.</strong><a href="#"> bootstrap@twitter.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row credits">
-                <div class="span12">
-                    <div class="row social">
-                        <div class="span12">
-                            <a href="#" class="facebook">
-                                <span class="socialicons ico1"></span>
-                                <span class="socialicons_h ico1h"></span>
-                            </a>
-                            <a href="#" class="twitter">
-                                <span class="socialicons ico2"></span>
-                                <span class="socialicons_h ico2h"></span>
-                            </a>
-                            <a href="#" class="gplus">
-                                <span class="socialicons ico3"></span>
-                                <span class="socialicons_h ico3h"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row copyright">
-                        <div class="span12">
-                            © @DateTime.Now.Year Anton G.
-                        </div>
-                    </div>
-                </div>            
-            </div>
-        </div>
-    </footer>		
+		<footer id="footer" >
+			<div class="container">
+				<div class="row info">
+					<div class="span6 residence">
+						<ul>
+							<li>2301 East Lamar Blvd. Suite 140. City, Arlington.</li>
+							<li>United States, Zip Code TX 76006.</li>
+						</ul>
+					</div>
+					<div class="span5 touch">
+						<ul>
+							<li><strong>P.</strong> 1 817 274 2933</li>
+							<li><strong>E.</strong><a href="#"> bootstrap@twitter.com</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row credits">
+					<div class="span12">
+						<div class="row social">
+							<div class="span12">
+								<a href="#" class="facebook">
+									<span class="socialicons ico1"></span>
+									<span class="socialicons_h ico1h"></span>
+								</a>
+								<a href="#" class="twitter">
+									<span class="socialicons ico2"></span>
+									<span class="socialicons_h ico2h"></span>
+								</a>
+								<a href="#" class="gplus">
+									<span class="socialicons ico3"></span>
+									<span class="socialicons_h ico3h"></span>
+								</a>
+							</div>
+						</div>
+						<div class="row copyright">
+							<div class="span12">
+								© @DateTime.Now.Year Anton G.
+							</div>
+						</div>
+					</div>            
+				</div>
+			</div>
+		</footer>		
 		@Scripts.Render("~/bundles/jquery", "~/bundles/jqueryval")
 		@Scripts.Render("~/bundles/bootstrap")
 		@Scripts.Render("~/bundles/clean-canvas-js")
