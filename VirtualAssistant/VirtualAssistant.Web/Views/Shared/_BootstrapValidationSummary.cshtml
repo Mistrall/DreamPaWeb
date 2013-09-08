@@ -1,11 +1,11 @@
 ﻿@model ModelStateDictionary
 
-<div class="@(Html.ViewData.ModelState.IsValid ? "validation-summary-valid" : "validation-summary-errors") panel panel-danger"
+<div class="@(Html.ViewData.ModelState.IsValid ? "validation-summary-valid" : "validation-summary-errors") alert-block"
      data-valmsg-summary="true">
-    <div class="panel-heading">
-        Please, correct the following errors:
-    </div>
-    <div class="panel-body">
+@*    <div class="panel-heading">*@
+@*        Please, correct the following errors:*@
+@*    </div>*@
+    <div class="alert-block alert-danger ">
         <ul>
             @foreach(var modelError in Model.SelectMany(keyValuePair => keyValuePair.Value.Errors))
             {

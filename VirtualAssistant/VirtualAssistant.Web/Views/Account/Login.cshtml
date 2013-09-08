@@ -12,7 +12,7 @@
 <h2>Use a local account to log in.</h2>
 @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
     @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true, "Log in was unsuccessful. Please correct the errors and try again.")
+    @Html.Partial("_BootstrapValidationSummary", ViewData.ModelState)
 
     <div class="well">
         <fieldset>
@@ -28,7 +28,7 @@
                 Remember Me?
             </label>
             <div>
-                <input type="submit" value="Log in" class="btn btn-primary btn-large" />
+                <input type="submit" value="Log in" class="btn btn-primary" />
             </div>
             
         </fieldset>

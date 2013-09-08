@@ -26,7 +26,7 @@ namespace VirtualAssistant.Web.App_Start
 			bundles.Add(new StyleBundle("~/css")
 				.Include("~/Content/bootstrap/bootstrap.css")
 				.Include("~/Content/bootstrap/bootstrap-responsive.css")
-				//.Include("~/Content/Site.css")
+				.Include("~/Content/bootstrap/validation-errors.css")
 				);
 
 			bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include("~/Scripts/bootstrap.js"));
