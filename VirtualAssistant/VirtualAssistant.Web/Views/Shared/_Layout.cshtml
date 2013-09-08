@@ -5,21 +5,19 @@
 		<meta charset="utf-8" />
 		<title>@ViewBag.Title - Dream PA</title>
 		<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		@Styles.Render("~/css")
-		@Scripts.Render("~/bundles/modernizr")
-		<style type="text/css">
-        body
-        {
-            padding-top: 60px;
-            padding-bottom: 40px;
-        }
-        .sidebar-nav
-        {
-            padding: 9px 0;
-        }
-    </style>
+		@Styles.Render("~/css/clean-canvas-theme")
+		
+		@RenderSection("usage", required:false)
+
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+@*		<link rel="stylesheet" href="~/Content/clean-canvas-bootstrap/index.css"/>*@
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 	</head>
 	<body>
 		<div class="navbar navbar-inverse navbar-fixed-top">
@@ -35,51 +33,89 @@
 							@Html.MenuLink("Home", "Index", "Home")
 							@Html.MenuLink("About", "About", "Home")
 							@Html.MenuLink("Contact", "Contact", "Home")
+							@Html.MenuLink("Pricing", "Pricing", "Home")
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container">
+		<div>
 			<noscript>
 				<div class="alert">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
 					<strong>Warning!</strong> Please enable JavaScript in your browser!
 				</div>
 			</noscript>
-@*		Main content goes here*@
-        <div class="row">
-            @if (IsSectionDefined("sidebar"))
-            {
-                <div class="span2">
-                    @RenderSection("sidebar", required: false)
-                </div>
-            }
+			@*		Main content goes here*@
+			<div class="row">
+				@if (IsSectionDefined("sidebar"))
+				{
+					<div class="span2">
+						@RenderSection("sidebar", required: false)
+					</div>
+				}
 
-            <div id="content" @(IsSectionDefined("sidebar") ? Html.Raw("class=span10") : Html.Raw("class=span12"))>
-                @if (IsSectionDefined("featured"))
-                {
-                    <div>
-                        <div class="hero-unit">
-                            @RenderSection("featured", required: false)
-                        </div>
-                    </div>
-                }
-                <div>
-                    @RenderBody()
-                </div>
-            </div>
-        </div>
-		</div>
-		<div class="navbar navbar-fixed-bottom">
-			<div class="navbar-inner">
-				<div class="container">
-					<p>&copy; @DateTime.Now.Year - Anton G</p>
+				<div id="content">
+					@if (IsSectionDefined("featured"))
+					{
+						<div>
+							<div class="hero-unit">
+								@RenderSection("featured", required: false)
+							</div>
+						</div>
+					}
+					<div>
+						@RenderBody()
+					</div>
 				</div>
 			</div>
 		</div>
+    <footer id="footer" >
+        <div class="container">
+            <div class="row info">
+                <div class="span6 residence">
+                    <ul>
+                        <li>2301 East Lamar Blvd. Suite 140. City, Arlington.</li>
+                        <li>United States, Zip Code TX 76006.</li>
+                    </ul>
+                </div>
+                <div class="span5 touch">
+                    <ul>
+                        <li><strong>P.</strong> 1 817 274 2933</li>
+                        <li><strong>E.</strong><a href="#"> bootstrap@twitter.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row credits">
+                <div class="span12">
+                    <div class="row social">
+                        <div class="span12">
+                            <a href="#" class="facebook">
+                                <span class="socialicons ico1"></span>
+                                <span class="socialicons_h ico1h"></span>
+                            </a>
+                            <a href="#" class="twitter">
+                                <span class="socialicons ico2"></span>
+                                <span class="socialicons_h ico2h"></span>
+                            </a>
+                            <a href="#" class="gplus">
+                                <span class="socialicons ico3"></span>
+                                <span class="socialicons_h ico3h"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row copyright">
+                        <div class="span12">
+                            © @DateTime.Now.Year Anton G.
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </footer>		
 		@Scripts.Render("~/bundles/jquery", "~/bundles/jqueryval")
 		@Scripts.Render("~/bundles/bootstrap")
+		@Scripts.Render("~/bundles/clean-canvas-js")
 		@RenderSection("scripts", required: false)
 	</body>
 </html>

@@ -2,35 +2,111 @@
 	ViewBag.Title = "About";
 }
 
-<hgroup>
-	<h1>@ViewBag.Title</h1>
-	<h2>@ViewBag.Message</h2>
-</hgroup>
+@section usage {
+	<link rel="stylesheet" href="~/Content/clean-canvas-bootstrap/about.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="~/Content/clean-canvas-bootstrap/lib/flexslider.css" type="text/css" media="screen">
+}
+    <div id="aboutus">
+        <div class="container">
+            <div class="section_header">
+                <h3>About Us</h3>
+            </div>
+            <div class="row">
+                <div class="span6 intro">
+                    <h6>There are many variations of passages Lorem Ipsum available, injected generators on the hidden.</h6>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, injected 
+                        generators on the  embarrassing hidden in the middle all the dictionary making it look like readable English. Many desktop publishing packages and web page editors.
+                        <br /><br />
+                        There are many variations of passages of Lorem Ipsum available, but the ndictionary of over 200 Latin words, combined with a handful of models The generated Lorem Ipsum is therefore always free from repetition, the injected humour, or non-characteristic words etc.</p>
+                </div>
+                <div class="span6 flexslider">
+                      <ul class="slides">
+                        <li>
+                          <img src="~/Content/clean-canvas-bootstrap/img/about_slide1.jpg" />
+                        </li>
+                        <li>
+                          <img src="~/Content/clean-canvas-bootstrap/img/about_slide1.jpg" />
+                        </li>
+                        <li>
+                          <img src="~/Content/clean-canvas-bootstrap/img/about_slide1.jpg" />
+                        </li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div>
-	<article>
-		<p>
-			Use this area to provide additional information.
-		</p>
+    <div id="team">
+        <div class="container">
+            <div class="section_header">
+                <h3>Meet our Team</h3>
+            </div>
 
-		<p>
-			Use this area to provide additional information.
-		</p>
+            <div class="row people">
+                <div class="row row1">
+                    <div class="span6 bio_box">
+                        <img id="photo1" src="~/Content/clean-canvas-bootstrap/img/marina.jpg" alt="">
+                        <div class="info">
+                            <p class="name">Marina Vasilieva</p>
+                            <p class="area">Creative Director</p>
+                            <a href="#" class="facebook">
+                                <span class="socialicons ico1"></span>
+                                <span class="socialicons_h ico1h"></span>
+                            </a>
+                            <a href="#" class="twitter">
+                                <span class="socialicons ico2"></span>
+                                <span class="socialicons_h ico2h"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-		<p>
-			Use this area to provide additional information.
-		</p>
-	</article>
+    <div id="process">
+        <div class="container">
+            <div class="section_header">
+                <h3>Our Process</h3>
+            </div>
+            <div class="row services_circles">
+                <div class="span4 description">
+                    <div class="text active">
+                        <h4>Plan what you need.</h4>
+                        <p>
+                            There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to making this the first true generator  Internet.</p>
+                    </div>
+                    <div class="text">
+                        <h4>Develop your product or service.</h4>
+                        <p>
+                            There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to 
+                            making this the first true generator  Internet.</p>
+                    </div>
+                    <div class="text">
+                        <h4>Design this theme to your needs.</h4>
+                        <p>
+                            There are many variations of passages of  this suffered alteration in some form, by injected look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to making this the first true generator  Internet.</p>
+                    </div>
+                </div>
 
-	<aside>
-		<h3>Aside Title</h3>
-		<p>
-			Use this area to provide additional information.
-		</p>
-		<ul>
-			<li>@Html.ActionLink("Home", "Index", "Home")</li>
-			<li>@Html.ActionLink("About", "About", "Home")</li>
-			<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-		</ul>
-	</aside>
-</div>
+                <div class="span7 areas">
+                    <div class="circle active">
+                        <img src="~/Content/clean-canvas-bootstrap/img/plan.png" />
+                        <span>Plan</span>
+                    </div>
+                    <div class="circle">
+                        <img src="~/Content/clean-canvas-bootstrap/img/develop.png" />
+                        <span>Develop</span>
+                    </div>
+                    <div class="circle last_circle">
+                        <img src="~/Content/clean-canvas-bootstrap/img/design.png" />
+                        <span>Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@section scripts {
+	<script type="text/javascript" src="~/Content/clean-canvas-bootstrap/js/flexslider.js"></script>
+}

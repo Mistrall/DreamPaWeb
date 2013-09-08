@@ -3,35 +3,80 @@
     ViewBag.Title = "Register";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>Create a new account.</h2>
-</hgroup>
-
-@*    <p class="message-info">*@
-@*        Passwords must be at least *@
-@*        @Membership.MinRequiredPasswordLength characters long.*@
-@*    </p>*@
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-	@Html.Partial("_BootstrapValidationSummary", ViewData.ModelState)
-    <div class="well">
-        <fieldset>
-            <legend>Registration Form</legend>
-            @Html.LabelFor(m => m.UserName)
-            @Html.TextBoxFor(m => m.UserName,
-                    new { @class = "span3" })
-            @Html.LabelFor(m => m.Password)
-            @Html.PasswordFor(m => m.Password,
-                    new { @class = "span3" })
-            @Html.LabelFor(m => m.ConfirmPassword)
-            @Html.PasswordFor(m => m.ConfirmPassword,
-                    new { @class = "span3" })
-			<br/>
-			<input type="submit" value="Register >>" class="btn btn-primary" />
-        </fieldset>
-    </div>
+@section usage{
+	<link rel="stylesheet" href="~/Content/clean-canvas-bootstrap/sign-up.css">
 }
+
+<div id="sign_up2">
+	<div class="container">
+		<div class="section_header">
+			<h3>Sign up</h3>
+		</div>
+		<div class="row login">
+			<div class="span5 left_box">
+				<h4>Create your account</h4>
+
+				<div class="perk_box">
+					<div class="perk">
+						<span class="icos ico1"></span>
+						<p><strong>Lorem alteration</strong> in some form  injected humour these randomised words .</p>
+					</div>
+					<div class="perk">
+						<span class="icos ico2"></span>
+						<p><strong>There are many variations</strong> of passages of Lorem alteration in some form  injected humour these randomised words.</p>
+					</div>
+					<div class="perk">
+						<span class="icos ico3"></span>
+						<p><strong>Alteration in some form</strong> injected humour these randomised words.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="span6 signin_box">
+				<div class="box">
+					<div class="box_cont">
+						<div class="social">
+							<a href="#" class="circle facebook">
+								<img src="~/Content/clean-canvas-bootstrap/img/face.png" alt="">
+							</a>
+							<a href="#" class="circle twitter">
+								<img src="~/Content/clean-canvas-bootstrap/img/twt.png" alt="">
+							</a>
+							<a href="#" class="circle gplus">
+								<img src="~/Content/clean-canvas-bootstrap/img/gplus.png" alt="">
+							</a>
+						</div>
+						
+						<div class="division">
+							<div class="line l"></div>
+							<span>or</span>
+							<div class="line r"></div>
+						</div>
+						
+						<div class="form">
+							@using (Html.BeginForm())
+							{
+								@Html.AntiForgeryToken()
+								@Html.Partial("_BootstrapValidationSummary", ViewData.ModelState)
+								
+		   						@Html.TextBoxFor(m => m.UserName,new {  @placeholder="Email" })
+								@Html.PasswordFor(m => m.Password,new {  @placeholder="Password" })
+								@Html.PasswordFor(m => m.ConfirmPassword,new {  @placeholder="Confirm Password" })
+
+								<div class="forgot">
+									<span>Already have an account?</span>
+									<a href="@Url.Action("Login", "Account")">Sign in</a>
+								</div>
+								<input type="submit" value="sign up" />
+							}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
