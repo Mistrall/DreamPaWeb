@@ -47,19 +47,19 @@
 				</div>
 			</noscript>
 			@*		Main content goes here*@
-			<div class="row">
-				@if (IsSectionDefined("sidebar"))
-				{
-					<div class="span2">
-						@RenderSection("sidebar", required: false)
-					</div>
-				}
+			<div>
+@*				@if (IsSectionDefined("sidebar"))*@
+@*				{*@
+@*					<div class="span2">*@
+@*						@RenderSection("sidebar", required: false)*@
+@*					</div>*@
+@*				}*@
 
 				<div id="content">
 					@if (IsSectionDefined("featured"))
 					{
 						<div>
-							<div class="hero-unit">
+							<div>
 								@RenderSection("featured", required: false)
 							</div>
 						</div>

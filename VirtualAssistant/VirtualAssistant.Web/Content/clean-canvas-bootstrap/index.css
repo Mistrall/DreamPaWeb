@@ -126,10 +126,10 @@
     text-shadow: 1px 1px 1px #3b3262;
     line-height: 57px;
 }
-.slide#tour .info a {
+.slide#responsive .info a {
     color: #fff;
     font-weight: bold;
-    background-color: #2a205d;
+    background-color: #282984;
     padding: 13px 30px;
     font-size: 19px;
     border-radius: 5px;
