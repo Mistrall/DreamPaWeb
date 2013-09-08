@@ -21,11 +21,15 @@ namespace VirtualAssistant.Web.App_Start
 			// ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
 			bundles.Add(new ScriptBundle("~/bundles/modernizr")
 				.Include("~/Scripts/modernizr-*")
-				.Include("~/Scripts/bootstrap.min.*"));
+				);
 
-			bundles.Add(new StyleBundle("~/Content/css")
-				.Include("~/Content/bootstrap/bootstrap.min.css")
-				.Include("~/Content/bootstrap/bootstrap-responsive.min.css"));
+			bundles.Add(new StyleBundle("~/css")
+				.Include("~/Content/bootstrap/bootstrap.css")
+				.Include("~/Content/bootstrap/bootstrap-responsive.css")
+				//.Include("~/Content/Site.css")
+				);
+
+			bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include("~/Scripts/bootstrap.js"));
 
 			bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
 						"~/Content/themes/base/jquery.ui.core.css",

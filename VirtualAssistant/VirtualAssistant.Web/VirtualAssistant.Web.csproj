@@ -188,6 +188,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\UserTaskModel.cs" />
     <Compile Include="Models\VirtualAssistant\UserTaskContext.cs" />
@@ -326,6 +327,7 @@
     <Content Include="Views\UserTask\Create.cshtml" />
     <Content Include="Views\UserTask\Edit.cshtml" />
     <Content Include="Views\UserTask\Delete.cshtml" />
+    <Content Include="Views\Shared\_BootstrapValidationSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
