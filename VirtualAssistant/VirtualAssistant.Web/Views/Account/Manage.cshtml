@@ -1,32 +1,36 @@
 ﻿@model VirtualAssistant.Web.Models.LocalPasswordModel
 @{
-    ViewBag.Title = "Manage Account";
+	ViewBag.Title = "Manage Account";
 }
-
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-</hgroup>
-
-<p class="message-success">@ViewBag.StatusMessage</p>
-
-<p>You're logged in as <strong>@User.Identity.Name</strong>.</p>
-
-@if (ViewBag.HasLocalPassword)
-{
-    @Html.Partial("_ChangePasswordPartial")
+@section usage{
+	<link rel="stylesheet" href="~/Content/clean-canvas-bootstrap/sign-in.css">
+	<link rel="stylesheet" href="~/Content/clean-canvas-custom-fixes/sign-in-fix.css">
 }
-else
-{ 
-    @Html.Partial("_SetPasswordPartial")
-}
+<div class="container">
+	<hgroup class="title">
+		<h1>@ViewBag.Title.</h1>
+	</hgroup>
 
-<section id="externalLogins">
-    @Html.Action("RemoveExternalLogins")
+	<p class="message-success">@ViewBag.StatusMessage</p>
 
-    <h3>Add an external login</h3>
-    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
-</section>
+	<p>You're logged in as <strong>@User.Identity.Name</strong>.</p>
 
+	@if (ViewBag.HasLocalPassword)
+	{
+		@Html.Partial("_ChangePasswordPartial")
+	}
+	else
+	{
+		@Html.Partial("_SetPasswordPartial")
+	}
+
+	<section id="externalLogins">
+		@Html.Action("RemoveExternalLogins")
+
+		<h3>Add an external login</h3>
+		@Html.Action("ExternalLoginsList", new {ReturnUrl = ViewBag.ReturnUrl})
+	</section>
+</div>
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+	@Scripts.Render("~/bundles/jqueryval")
 }
