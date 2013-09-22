@@ -359,6 +359,7 @@
     <Content Include="Content\clean-canvas-bootstrap\sign-in.css" />
     <Content Include="Content\clean-canvas-bootstrap\sign-up.css" />
     <Content Include="Content\clean-canvas-bootstrap\theme.css" />
+    <Content Include="Content\clean-canvas-custom-fixes\sign-in-fix.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />

@@ -1,0 +1,32 @@
+﻿button.circle {
+	text-align: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    margin-right: 25px;
+    display: inline-block;
+    -webkit-transition: border-color ease-in .1s;
+    -moz-transition: border-color ease-in .1s;
+    -o-transition: border-color ease-in .1s;
+    transition: border-color ease-in .1s;
+}
+
+button.circle:hover {
+	border-color: rgb(0, 0, 0);
+}
+ 
+button.facebook {
+	border:2px solid #233678;
+    background: #233678;
+}
+
+button.twitter {
+	background: #54AEE1;
+	border: 2px solid #54AEE1;
+}
+
+button.gplus {
+	background: #292929;
+	border: 2px solid #292929;
+	margin: 0;
+}
