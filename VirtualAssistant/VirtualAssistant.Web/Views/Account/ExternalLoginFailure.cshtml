@@ -1,8 +1,24 @@
 ﻿@{
-    ViewBag.Title = "Login Failure";
+	ViewBag.Title = "External Login Failure";
 }
+<style>
+	.center {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: auto;
+		margin-top: auto;
+	}
+</style>
+<div class="container page-content-container">
+	<div class="hero-unit center">
+		<h2 >@ViewBag.Title.</h2>
+		<br/>
+		<p>Unfortunately we cannot log you in with external service :(. Please contact site administrator or try again later</p>
+		<br/>
+		<p>Use your browsers <b>Back</b> button to navigate to the page you have prevously come from</p>
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>Unsuccessful login with service.</h2>
-</hgroup>
+		<p><b>Or you could just press this neat little button:</b></p>
+		@Html.ActionLink("Take me home", "Index", "Home", null, new {@class ="btn btn-large btn-info"})
+	</div>
+</div>

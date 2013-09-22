@@ -2,32 +2,31 @@
 
 @if (Model.Count == 0)
 {
-    <div class="message-info">
-        <p>There are no external authentication services configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=252166">this article</a>
-        for details on setting up this ASP.NET application to support logging in via external services.</p>
-    </div>
+	<div class="alert-block">
+		<p class="alert-info">Sorry! External authentication services doens't work or not configured. Please create local account.</p>
+	</div>
 }
 else
 {
-    using (Html.BeginForm("ExternalLogin", "Account", new { ReturnUrl = ViewBag.ReturnUrl }))
-    {
-    @Html.AntiForgeryToken()
-    <fieldset id="socialLoginList">
-        <legend>Log in using another service</legend>
-	    <div class="social">
-		            @foreach (AuthenticationClientData p in Model)
-        {
-	        <button type="submit" class="circle facebook" name="provider" value="@p.AuthenticationClient.ProviderName" title="Log in using your @p.DisplayName account">
-				<img src="~/Content/clean-canvas-bootstrap/img/face.png" alt="">
-	        </button>
-        }
-		    <button class="circle twitter" disabled="disabled">
-			    <img src="~/Content/clean-canvas-bootstrap/img/twt.png" alt="">
-		    </button>
-		    <button class="circle gplus" disabled="disabled">
-			    <img src="~/Content/clean-canvas-bootstrap/img/gplus.png" alt="">
-		    </button>
-	    </div>
-    </fieldset>
-    }
+	using (Html.BeginForm("ExternalLogin", "Account", new {ReturnUrl = ViewBag.ReturnUrl}))
+	{
+		@Html.AntiForgeryToken()
+		<fieldset id="socialLoginList">
+			<legend>Log in using another service</legend>
+			<div class="social">
+				@foreach (AuthenticationClientData p in Model)
+				{
+					<button type="submit" class="circle facebook" name="provider" value="@p.AuthenticationClient.ProviderName" title="Log in using your @p.DisplayName account">
+						<img src="~/Content/clean-canvas-bootstrap/img/face.png" alt="">
+					</button>
+				}
+				<button class="circle twitter" disabled="disabled">
+					<img src="~/Content/clean-canvas-bootstrap/img/twt.png" alt="">
+				</button>
+				<button class="circle gplus" disabled="disabled">
+					<img src="~/Content/clean-canvas-bootstrap/img/gplus.png" alt="">
+				</button>
+			</div>
+		</fieldset>
+	}
 }
