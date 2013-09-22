@@ -1,4 +1,6 @@
-﻿namespace VirtualAssistant.Web.App_Start
+﻿using Microsoft.Web.WebPages.OAuth;
+
+namespace VirtualAssistant.Web.App_Start
 {
 	public static class AuthConfig
 	{
@@ -15,9 +17,9 @@
 			//    consumerKey: "",
 			//    consumerSecret: "");
 
-			//OAuthWebSecurity.RegisterFacebookClient(
-			//    appId: "",
-			//    appSecret: "");
+			OAuthWebSecurity.RegisterFacebookClient(
+				appId: "1419590428264107",
+				appSecret: "ff3864334ec86bc63b4c327da5e6e1df");
 
 			//OAuthWebSecurity.RegisterGoogleClient();
 		}
