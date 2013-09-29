@@ -16,16 +16,27 @@ else
 			<div class="social">
 				@foreach (AuthenticationClientData p in Model)
 				{
-					<button type="submit" class="circle facebook" name="provider" value="@p.AuthenticationClient.ProviderName" title="Log in using your @p.DisplayName account">
-						<img src="~/Content/clean-canvas-bootstrap/img/face.png" alt="">
+					<button type="submit" class="circle @(p.AuthenticationClient.ProviderName=="facebook"?"facebook":p.AuthenticationClient.ProviderName=="twitter"?"twitter":"gplus")" name="provider" value="@p.AuthenticationClient.ProviderName" title="Log in using your @p.DisplayName account">
+						@switch (p.AuthenticationClient.ProviderName)
+						{
+							case "facebook":
+								<img src="~/Content/clean-canvas-bootstrap/img/face.png" alt="" />
+								break;
+							case "twitter":
+								<img src="~/Content/clean-canvas-bootstrap/img/twt.png" alt="" />
+								break;
+							case "google":
+								<img src="~/Content/clean-canvas-bootstrap/img/gplus.png" alt="" />
+								break;
+						}
 					</button>
 				}
-				<button class="circle twitter" disabled="disabled">
+@*				<button type="submit" class="circle twitter" name="provider" value="twitter" title="Log in using your twitter account">
 					<img src="~/Content/clean-canvas-bootstrap/img/twt.png" alt="">
 				</button>
 				<button class="circle gplus" disabled="disabled">
 					<img src="~/Content/clean-canvas-bootstrap/img/gplus.png" alt="">
-				</button>
+				</button>*@
 			</div>
 		</fieldset>
 	}

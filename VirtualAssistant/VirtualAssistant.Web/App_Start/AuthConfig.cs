@@ -12,16 +12,15 @@ namespace VirtualAssistant.Web.App_Start
 			//OAuthWebSecurity.RegisterMicrosoftClient(
 			//    clientId: "",
 			//    clientSecret: "");
-
-			//OAuthWebSecurity.RegisterTwitterClient(
-			//    consumerKey: "",
-			//    consumerSecret: "");
-
 			OAuthWebSecurity.RegisterFacebookClient(
 				appId: "1419590428264107",
 				appSecret: "ff3864334ec86bc63b4c327da5e6e1df");
 
-			//OAuthWebSecurity.RegisterGoogleClient();
+			OAuthWebSecurity.RegisterTwitterClient(
+				consumerKey: "U19Px06YoRQyG40eHxN5LA",
+				consumerSecret: "J5cLkLpUxagjKUAQhtWdHfrEJobhLOr9ZiKoai0");
+
+			OAuthWebSecurity.RegisterGoogleClient();
 		}
 	}
 }
