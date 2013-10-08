@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Threading;
+using System.Web.Mvc;
 using System.Web.Mvc.Html;
 
 namespace VirtualAssistant.Web.Helpers
@@ -19,6 +20,13 @@ namespace VirtualAssistant.Web.Helpers
 				builder.AddCssClass("active");
 
 			return new MvcHtmlString(builder.ToString());
+		}
+
+		public static MvcHtmlString RenderCulture(this HtmlHelper htmlHelper)
+		{
+			var culture = Thread.CurrentThread.CurrentCulture;
+
+			return new MvcHtmlString(culture.Name);
 		}
 	}
 }
