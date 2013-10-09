@@ -195,6 +195,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-form-helpers\bootstrap-formhelpers-countries.flags.css" />
+    <Content Include="Content\bootstrap-form-helpers\img\bootstrap-formhelpers-countries.flags-LICENSE.txt" />
+    <Content Include="Content\bootstrap-form-helpers\img\bootstrap-formhelpers-countries.flags.png" />
     <Content Include="Content\bootstrap\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
@@ -489,6 +492,7 @@
     <Content Include="Views\UserTask\Delete.cshtml" />
     <Content Include="Views\Shared\_BootstrapValidationSummary.cshtml" />
     <Content Include="Views\Home\Pricing.cshtml" />
+    <Content Include="Views\Shared\_LanguageSelect.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

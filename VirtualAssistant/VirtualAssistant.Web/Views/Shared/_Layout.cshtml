@@ -9,6 +9,7 @@
 
 		@Styles.Render("~/css")
 		@Styles.Render("~/css/clean-canvas-theme")
+		@Styles.Render("~/css/bootstrap-form-helpers")
 		
 		@RenderSection("usage", required: false)
 
@@ -27,6 +28,7 @@
 					</a>
 					<a class="brand" href="@Url.Action("Index", "Home")">Your logo here</a>
 					@Html.Partial("_LoginPartial")
+					@Html.Partial("_LanguageSelect")
 					<div class="nav-collapse">
 						<ul class="nav">
 							@Html.MenuLink("Home", "Index", "Home")

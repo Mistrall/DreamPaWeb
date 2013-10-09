@@ -5,6 +5,7 @@
 
 @section usage{
 	<link rel="stylesheet" href="~/Content/clean-canvas-bootstrap/sign-up.css">
+	<link rel="stylesheet" href="~/Content/clean-canvas-custom-fixes/sign-in-fix.css">
 }
 
 <div id="sign_up2">
@@ -35,18 +36,7 @@
 			<div class="span6 signin_box">
 				<div class="box">
 					<div class="box_cont">
-						<div class="social">
-							<a href="#" class="circle facebook">
-								<img src="~/Content/clean-canvas-bootstrap/img/face.png" alt="">
-							</a>
-							<a href="#" class="circle twitter">
-								<img src="~/Content/clean-canvas-bootstrap/img/twt.png" alt="">
-							</a>
-							<a href="#" class="circle gplus">
-								<img src="~/Content/clean-canvas-bootstrap/img/gplus.png" alt="">
-							</a>
-						</div>
-						
+						@Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
 						<div class="division">
 							<div class="line l"></div>
 							<span>or</span>

@@ -12,7 +12,7 @@ else
 	{
 		@Html.AntiForgeryToken()
 		<fieldset id="socialLoginList">
-			<legend>Log in using another service</legend>
+			<legend style="text-align: center">Log in using another service</legend>
 			<div class="social">
 				@foreach (AuthenticationClientData p in Model)
 				{
@@ -31,12 +31,6 @@ else
 						}
 					</button>
 				}
-@*				<button type="submit" class="circle twitter" name="provider" value="twitter" title="Log in using your twitter account">
-					<img src="~/Content/clean-canvas-bootstrap/img/twt.png" alt="">
-				</button>
-				<button class="circle gplus" disabled="disabled">
-					<img src="~/Content/clean-canvas-bootstrap/img/gplus.png" alt="">
-				</button>*@
 			</div>
 		</fieldset>
 	}
