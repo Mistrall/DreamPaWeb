@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using VirtualAssistant.Web.Helpers;
 
 namespace VirtualAssistant.Web.Controllers
 {
@@ -28,6 +29,13 @@ namespace VirtualAssistant.Web.Controllers
 		public ActionResult Pricing()
 		{
 			return View();
+		}
+
+		public ActionResult SetLanguagePreference(string locale)
+		{
+			CookieHelper.SetCookie("DreamPaLang", "Locale", locale);
+			//After setting locale cookie we are redirecting back to calling url
+			return Redirect(Request.UrlReferrer.ToString());
 		}
 	}
 }

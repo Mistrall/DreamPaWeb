@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using VirtualAssistant.Web.App_Start;
+using VirtualAssistant.Web.Helpers;
 
 namespace VirtualAssistant.Web
 {
@@ -27,14 +28,14 @@ namespace VirtualAssistant.Web
 
 		protected void Application_AcquireRequestState(object sender, EventArgs e)
 		{
-			var languageCookie = Context.Request.Cookies["lang"];
+			var languageCookie = CookieHelper.GetCookieValue("DreamPaLang", "Locale");
 			var userLanguages = Context.Request.UserLanguages;
 
 			// Set the Culture based on a route, a cookie or the browser settings,
 			// or default value if something went wrong
 			var cultureInfo = new CultureInfo(
-				languageCookie != null
-					? languageCookie.Value
+				!String.IsNullOrEmpty(languageCookie)
+					? languageCookie
 					: userLanguages != null
 						  ? userLanguages[0]
 						  : "en"
