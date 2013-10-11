@@ -1,9 +1,20 @@
 ﻿@using VirtualAssistant.Web.Helpers
 @model dynamic
+<script type="text/javascript">
+	$(document).ready(function () {
+		var caretMarkup = '<b class="caret"></b>';
+		var locale = "@Html.RenderCulture()";
+		if (locale == "ru-RU") {
+			$('#langHeader').html($('#langRu').html() + " " + caretMarkup);
+		} else {
+			$('#langHeader').html($('#langEn').html() + " " + caretMarkup);
+		}
+	});
+</script>
 <div class="btn-group pull-right">
-	<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Language <b class="caret"></b></a>
+	<a id="langHeader" class="btn dropdown-toggle" data-toggle="dropdown" href="#">Language <b class="caret"></b></a>
 	<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-		<li><a tabindex="-1" href="@Url.Action("SetLanguagePreference", "Home", new {locale=Html.Encode("en")})"><i class="icon-flag-US"></i> @Html.Encode("English")</a></li>
-		<li><a tabindex="-1" href="@Url.Action("SetLanguagePreference", "Home", new {locale=Html.Encode("ru")})"><i class="icon-flag-RU"></i> @Html.Encode("Русский")</a></li>
+		<li><a id="langEn" tabindex="-1" href="@Url.Action("SetLanguagePreference", "Home", new {locale=Html.Encode("en")})"><i class="icon-flag-US"></i> @Html.Encode("English")</a></li>
+		<li><a id="langRu" tabindex="-1" href="@Url.Action("SetLanguagePreference", "Home", new {locale=Html.Encode("ru")})"><i class="icon-flag-RU"></i> @Html.Encode("Русский")</a></li>
 	</ul>
 </div>
