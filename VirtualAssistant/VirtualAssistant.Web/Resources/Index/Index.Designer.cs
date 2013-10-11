@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DreamPa.Web.Resources {
+namespace DreamPa.Web.Resources.Index {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace DreamPa.Web.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources {
+    public class Index {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal Index() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace DreamPa.Web.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("VirtualAssistant.Web.Resources.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("VirtualAssistant.Web.Resources.Index.Index", typeof(Index).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,29 @@ namespace DreamPa.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About.
+        ///   Looks up a localized string similar to Look around, there are some interesting pages..
         /// </summary>
-        public static string DescriptionPageHeader {
+        public static string CarouselHeader2 {
             get {
-                return ResourceManager.GetString("DescriptionPageHeader", resourceCulture);
+                return ResourceManager.GetString("CarouselHeader2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fully Responsive theme, should work on all devices.
+        /// </summary>
+        public static string CarouselHeader3 {
+            get {
+                return ResourceManager.GetString("CarouselHeader3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to I hope you like it X).
+        /// </summary>
+        public static string CarouselHeader4 {
+            get {
+                return ResourceManager.GetString("CarouselHeader4", resourceCulture);
             }
         }
         
@@ -79,11 +97,11 @@ namespace DreamPa.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to qeqe.
+        ///   Looks up a localized string similar to Hey Marina, this is the site I made for you!.
         /// </summary>
-        public static string IndexText {
+        public static string IndexMarinaHello {
             get {
-                return ResourceManager.GetString("IndexText", resourceCulture);
+                return ResourceManager.GetString("IndexMarinaHello", resourceCulture);
             }
         }
     }

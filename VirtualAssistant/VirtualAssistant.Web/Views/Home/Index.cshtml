@@ -1,5 +1,4 @@
-﻿@using VirtualAssistant.Web.Helpers
-@using VirtualAssistant.Web.Resources
+﻿@using DreamPa.Web.Resources.Index
 @{
 	ViewBag.Title = "Home Page";
 }
@@ -26,12 +25,12 @@
         <article class="slide" id="showcasing" style="background: url('/Content/clean-canvas-bootstrap/img/backgrounds/landscape.png') repeat-x top center;">
             <img class="asset left-30 sp600 t120 z1" src="/Content/clean-canvas-bootstrap/img/present222.jpg" />
             <div class="info">
-                <h2>Hey Marina, this is the site I made for you!</h2>
+                <h2>@Html.Encode(Index.IndexMarinaHello)</h2>
             </div>
         </article>
 	    <article class="slide" id="ideas" style="background: url('/Content/clean-canvas-bootstrap/img/backgrounds/aqua.jpg') repeat-x top center;">
 		    <div class="info">
-			    <h2>Look around, there are some interesting pages.</h2>
+			    <h2>@Html.Encode(Index.CarouselHeader2)</h2>
 		    </div>
 		    <img class="asset left-480 sp600 t260 z1" src="/Content/clean-canvas-bootstrap/img/slides/scene2/left.png" />
 		    <img class="asset left-210 sp600 t213 z2" src="/Content/clean-canvas-bootstrap/img/slides/scene2/middle.png" />
@@ -43,7 +42,7 @@
 		    <img class="asset left-350 sp450 t135 z2" src="/Content/clean-canvas-bootstrap/img/slides/scene3/desktop.png" />
 		    <img class="asset left-185 sp550 t220 z1" src="/Content/clean-canvas-bootstrap/img/slides/scene3/macbook.png" />
 		    <div class="info">
-			    <h2>Fully Responsive theme, should work on all devices</h2>
+			    <h2>@Html.Encode(Index.CarouselHeader3)</h2>
 		    </div>
 	    </article>
 		<article class="slide" id="responsive" style="background: url('/Content/clean-canvas-bootstrap/img/backgrounds/indigo.jpg') repeat-x top center;">
@@ -51,8 +50,7 @@
             <img class="asset left-190 sp500 t120 z2" src="/Content/clean-canvas-bootstrap/img/slides/scene4/css3.png" />
             <div class="info">
 	            <h2>
-		            Html5 & CSS3 fully used.
-		            I hope you like it X)
+					@Html.Encode(Index.CarouselHeader4)
 	            </h2>                
 				<a href="#">TOUR THE SITE</a>
             </div>
@@ -62,7 +60,7 @@
 }
 <div class="container">
 	<div class="row">
-		<h3>@Html.Encode(Resources.ResourceManager.GetString("IndexHeader"))</h3>
+		<h3>@Html.Encode(Index.IndexHeader)</h3>
 	</div>
 	<div class="row">
 		<div class="span4">

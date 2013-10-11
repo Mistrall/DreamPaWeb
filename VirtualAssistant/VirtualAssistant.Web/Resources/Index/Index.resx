@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CarouselHeader2" xml:space="preserve">
+    <value>Look around, there are some interesting pages.</value>
+  </data>
+  <data name="CarouselHeader3" xml:space="preserve">
+    <value>Fully Responsive theme, should work on all devices</value>
+  </data>
+  <data name="CarouselHeader4" xml:space="preserve">
+    <value>I hope you like it X)</value>
+  </data>
   <data name="IndexHeader" xml:space="preserve">
-    <value>Мы предлагаем следующее:</value>
+    <value>We suggest the following:</value>
+  </data>
+  <data name="IndexMarinaHello" xml:space="preserve">
+    <value>Hey Marina, this is the site I made for you!</value>
   </data>
 </root>
