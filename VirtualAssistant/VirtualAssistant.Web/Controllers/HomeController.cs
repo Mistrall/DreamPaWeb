@@ -14,7 +14,7 @@ namespace VirtualAssistant.Web.Controllers
 
 		public ActionResult About()
 		{
-			ViewBag.Message = "Your description page.";
+			ViewBag.Message =  "Your description page.";
 
 			return View();
 		}

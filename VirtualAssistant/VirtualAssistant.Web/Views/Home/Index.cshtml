@@ -1,4 +1,5 @@
 ﻿@using VirtualAssistant.Web.Helpers
+@using VirtualAssistant.Web.Resources
 @{
 	ViewBag.Title = "Home Page";
 }
@@ -61,7 +62,7 @@
 }
 <div class="container">
 	<div class="row">
-		<h3>We suggest the following:</h3>
+		<h3>@Html.Encode(Resources.ResourceManager.GetString("IndexHeader"))</h3>
 	</div>
 	<div class="row">
 		<div class="span4">
@@ -73,8 +74,6 @@
 				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 			<p><a class="btn" href="#">View details »</a></p>
-			
-			@Html.RenderCulture()
 		</div>
 		<div class="span4">
 			<h2>Second</h2>
