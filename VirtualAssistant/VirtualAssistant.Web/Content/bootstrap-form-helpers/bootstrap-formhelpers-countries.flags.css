@@ -1398,7 +1398,3 @@
         width: 16px;
         height: 16px;
 }
-
-[class^="_icon-"]:hover {
-	background: none !important;
-}

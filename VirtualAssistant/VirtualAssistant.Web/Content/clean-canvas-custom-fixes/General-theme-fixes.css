@@ -1,3 +1,29 @@
 ﻿.page-content-container {
 	margin-top: 70px;	
 }
+
+#langHeader {
+	display: inline-block;
+	padding: 4px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	line-height: 20px;
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid #5A5A5A;
+	text-decoration: none;
+	background-color: #111;
+	opacity: .6;
+}
+#langHeader:hover {
+
+	opacity: 1;
+}
+
+#langHeader > .caret {
+	margin-top: 8px;
+	margin-left: 0;
+	border-top: 4px solid #BBBBBB !important;
+}
