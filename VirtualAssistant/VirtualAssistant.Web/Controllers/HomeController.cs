@@ -5,36 +5,40 @@ namespace VirtualAssistant.Web.Controllers
 {
 	public class HomeController : Controller
 	{
-		public ActionResult Index()
+		public ViewResult Index()
 		{
 			ViewBag.Message = "";
 
 			return View();
 		}
 
-		public ActionResult About()
+		public ViewResult About()
 		{
 			ViewBag.Message =  "Your description page.";
 
 			return View();
 		}
 
-		public ActionResult Contact()
+		public ViewResult Contact()
 		{
 			ViewBag.Message = "Your contact page.";
 
 			return View();
 		}
 
-		public ActionResult Pricing()
+		public ViewResult Pricing()
 		{
 			return View();
 		}
 
-		public ActionResult SetLanguagePreference(string locale)
+		public ViewResult Home()
+		{
+			return View();
+		}
+
+		public RedirectResult SetLanguagePreference(string locale)
 		{
 			CookieHelper.SetCookie("DreamPaLang", "Locale", locale);
-			//After setting locale cookie we are redirecting back to calling url
 			return Redirect(Request.UrlReferrer.ToString());
 		}
 	}
